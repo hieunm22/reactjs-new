@@ -1,0 +1,185 @@
+body {
+  background: #ecf3f7;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.App {
+  width: calc(100% - 20px);
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.app-header--heading {
+  font-size: 20px;
+}
+
+.app-header--logo > img {
+  transform: translateY(5px);
+  margin-left: 10px;
+  background: transparent;
+}
+
+.task-define {
+  /* text-align: center; */
+  position: relative;
+}
+
+.task-list {
+  margin-bottom: 10px;
+}
+
+.task-item {
+  margin-bottom: 5px;
+  height: 50px;
+  color: white;
+  vertical-align: middle;
+}
+
+.task-item--checkbox {
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+
+.task-item--input-checkbox {
+  margin: 18px;
+}
+
+.task-item--seperate {
+  background-color: gray;
+  width: 3px;
+  height: 50px;
+  float: left;
+  background-color: white
+}
+
+.task-item--content {
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+  width: 91%;
+  height: 50px;
+  padding-left: 8px;
+  padding-top: 14px;
+}
+
+.task-define--content {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  padding-right: 280px;
+  border: solid 1px lightgray;
+  border-radius: 3px;
+  color: #696969;
+}
+
+.task-define--control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  text-align: right;
+  padding: 5px;
+}
+
+.task-define--button {
+  float:left;
+  margin-left: 15px;
+  width: 65px;
+  height: 30px;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  font-size: 15px;
+  border: solid 1px transparent;
+  border-radius: 1px;
+  background: #2ed0c1;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.task-define--button:hover {
+  transition: background 0.2s;
+  background: #26a69a;
+}
+
+.color-picker {
+  float:left;
+}
+
+.color-picker--color {
+  width: 22px;
+  height: 22px;
+  margin-left: 8px;
+  margin-top: 5px;
+  cursor: pointer;
+  border: solid 1px #ddd;
+  border-radius: 2px;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.complete-true {
+  background-color: lightgray;
+  color: black;
+  text-decoration: line-through;
+}
+
+.bg-0 {
+  background-color: #F16D6A;
+}
+
+.bg-1 {
+  background-color: #F279A2;
+}
+
+.bg-2 {
+  background-color: #9170CB;
+}
+
+.bg-3 {
+  background-color: #5EB2F6;
+}
+
+.bg-4 {
+  background-color: #68D7E5;
+}
+
+.bg-5 {
+  background-color: #FFE082;
+}
+
+.bg-done {
+  transition: background 1s;
+  background-color: gray;
+  text-decoration: line-through;
+}
+
+.task-status__completed {
+  transition: background 1s;
+  background-color: gray;
+  text-decoration: line-through;
+}
+
+.task-status__pending {
+  transition: background 1s;
+}
+
+.color_checked::before {
+  content: 'x';
+  position: absolute;
+  top: 0px;
+  left: 5px;
+}
