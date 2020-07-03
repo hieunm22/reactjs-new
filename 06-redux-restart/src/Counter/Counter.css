@@ -1,0 +1,12 @@
+.counter {
+  width: 700px;
+  max-width: 98%;
+  background-color: rgb(144, 184, 219);
+}
+
+.btn {
+  width: 150px;
+  margin: 5px;
+}
+
+
