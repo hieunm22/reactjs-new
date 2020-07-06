@@ -1,25 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { connect } from "redux-zero/react";
+import actions from "./actions";
 
-const TaskDefine = props => {
+const TaskDefine = ({ createTask }) => {
+  const [value, setValue] = useState('')
+  const handlerChange = e => setValue(e.target.value)
+  const submitTask = e => createTask(value)
+
   return (
-    <div className="task-define flex">
+    <div className="task-define">
       <input
         type="text"
-        className="task-content"
-        placeholder="Enter task content here"
-        onChange={props.onTextChange}
-        onKeyDown={props.onKeyDown}
-        value={props.content}
-        // ref={ele => this.txtContent = ele}
+        placeholder="task description"
+        value={value}
+        onChange={handlerChange}
       />
-      <button 
-        className="btn create-task"
-        onClick={props.onCreateTask}
+      <button
+        onClick={submitTask}
       >
-        <i className="fa fa-plus"></i>
-        Create
+        Create Task
       </button>
-    </div>)
+    </div>
+  )
 }
 
-export default TaskDefine
+
+const connected = connect(null, actions)
+
+export default connected(TaskDefine);

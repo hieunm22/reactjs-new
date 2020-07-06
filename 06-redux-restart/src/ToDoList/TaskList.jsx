@@ -1,32 +1,19 @@
-import React from 'react'
+import React from 'react';
+import TaskItem from './TaskItem'
 
-const TaskList = props => {
+const TaskList = ({ items }) => {
   return (
-    <div className="task-list">        
-    {props.list.map((item, index) => 
-      <div 
-        className="task-item flex"
-        key={index}
-      >
-        <input
-          type="text"
-          className="edit-control"
-          onChange={props.onEditContentChange}
-          readOnly={true}
-          value={item}
-        />
-        <div className="task-actions">
-          <button 
-            className="action"
-            onClick={props.onRemoveTask(index)}
-            title="Remove this item"
-          >
-            <i className="fa fa-trash"></i>
-          </button>
-        </div>
-      </div>
-    )}
-  </div>
+    <div className="task-list">
+    {
+      items.map((item, idx) => (
+          <TaskItem
+            item={item}
+            key={idx}
+          />
+        )
+      )
+    }
+    </div>
   )
 }
 

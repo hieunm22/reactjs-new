@@ -15,6 +15,9 @@ const Home = () => (
         <li>
           <Link to="/control">Control</Link>
         </li>
+        <li>
+          <Link to="/todolist">To do list</Link>
+        </li>
       </ul>
   </div>
 );
