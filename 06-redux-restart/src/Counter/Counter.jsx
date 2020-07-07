@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from "redux-zero/react";
-import actions from "./actions";
+import actions from "./../actions";
 
 const Counter = ({ count, incrementOf }) => {
   const [value, setValue] = useState(1)

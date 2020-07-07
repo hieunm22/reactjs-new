@@ -5,12 +5,15 @@ const TaskList = ({ items }) => {
   return (
     <div className="task-list">
     {
-      items.map((item, idx) => (
+      items.map((item, idx) => {
+		item.id = idx + 1
+	    return (
           <TaskItem
             item={item}
             key={idx}
           />
         )
+	  }
       )
     }
     </div>

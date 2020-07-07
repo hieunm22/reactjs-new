@@ -1,17 +1,15 @@
 import React from 'react'
 import { connect } from "redux-zero/react";
-import { multiplier } from "./actions"
+import actions from "./../actions"
 
-const Multiplier = ({ multiplier }) => (
+const Multiplier = ({ multiply }) => (
   <div className="text-only">
-    <button onClick={multiplier}>Multiplier</button>
+    <button onClick={multiply}>Multiplier</button>
   </div>
 )
 
-const mapActions = store => ({
-  multiplier
-})
+const mapToProps = ({ multiply }) => ({ multiply });
 
-const connected = connect(null, mapActions)
+const connected = connect(mapToProps, actions)
 
-export default connected(Multiplier)
+export default connected(Multiplier);
