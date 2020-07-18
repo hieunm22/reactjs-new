@@ -4,19 +4,15 @@ import actions from "./../actions";
 import TaskList from './TaskList';
 import TaskDefine from './TaskDefine';
 
-const ToDoList = ({ items, createTask }) => {
+const ToDoList = () => {
   return (
     <div className="container">
-      <TaskList
-        items={items}
-      />
+      <TaskList />
       <TaskDefine />
     </div>
   )
 }
 
-const mapToProps = ({ items, createTask }) => ({ items, createTask });
-
-const connected = connect(mapToProps, actions)
+const connected = connect(null, actions)
 
 export default connected(ToDoList);

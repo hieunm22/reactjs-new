@@ -6,17 +6,17 @@ const TaskDefine = ({ createTask }) => {
   const [value, setValue] = useState('')
   const handlerChange = e => setValue(e.target.value)
   const submitTask = e => {
-	if (value) {
-	  createTask(value)
-	  setValue('')
-	}
+    if (value) {
+      createTask(value)
+      setValue('')
+    }
   }
   const keyPress = e => {
-	if (e.charCode !== 13 || !value) {
-		return
-	}
-	createTask(value)
-	setValue('')
+    if (e.charCode !== 13 || !value) {
+      return
+    }
+    createTask(value)
+    setValue('')
   }
 
   return (
@@ -26,7 +26,7 @@ const TaskDefine = ({ createTask }) => {
         placeholder="task description"
         value={value}
         onChange={handlerChange}
-		onKeyPress={keyPress}
+        onKeyPress={keyPress}
       />
       <button onClick={submitTask}>
         Create Task
