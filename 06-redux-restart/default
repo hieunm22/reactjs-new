@@ -1,0 +1,9 @@
+server {
+   listen 80 default_server;
+   root /www/react-reboot/build;
+   server_name 167.71.206.158;
+   index index.html index.htm;
+   location / {
+   }
+}
+

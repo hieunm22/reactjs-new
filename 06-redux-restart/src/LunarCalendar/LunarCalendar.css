@@ -1,0 +1,141 @@
+.month-view {
+  width: 700px;
+  height: 400px;
+  max-width: 98%;
+  border: solid 1px gray;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  margin: 0 auto;
+}
+
+.month-header {
+  width: 100%;
+  height: 60px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+  font-weight: bolder;
+  align-items: center;
+  background-color: #1abc9c;
+  /* background-color: rgb(202, 202, 202); */
+}
+
+.month-year-title {
+  color: lightyellow;
+}
+
+.month-name {
+  font-size: 20px;
+  text-align: center;
+}
+
+.dropdown-icon {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdown-icon:hover {
+  background-color: transparent;
+  color: lightgray;
+}
+
+.dropdown-icon:active {
+  background-color: transparent;
+  color: gray;
+  outline: none;
+}
+
+.year-name {
+  font-size: 16px;
+  text-align: center;
+}
+
+.month-action {
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  font-size: 24px;
+  border: none;
+}
+
+.month-action:hover {
+  background-color: transparent;
+  color: lightgray;
+}
+
+.month-action:active {
+  background-color: transparent;
+  color: gray;
+}
+
+.day-of-week {
+  height: 40px;
+  background-color: #ddd;
+  align-content: center;
+  font-weight: bold;
+  align-items: center;
+}
+
+.day-of-week-title {
+  color: gray;
+  width: 100px;
+  max-width: calc(100% / 7);
+}
+
+.weekend {
+  color: red;
+}
+
+.month-content {
+  height: 300px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background-color: #f1f1f1;
+  align-content: center;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.today {
+  border: solid 1px #206ed4;
+}
+
+.full-day {
+  width: 100px;
+  max-width: calc(100% / 7);
+  cursor: pointer;
+  font-size: 14pt;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.full-day:hover {
+  background-color: #206ed4;
+}
+
+.lunar-date {
+  color: rgb(194, 194, 194);
+}
+
+.other-month {
+  color: gray;
+}
+
+.weekend.other-month, .lunar-special-dates {
+  color: rgb(255, 140, 140);
+}
+
+@media screen and (max-width: 800px) {
+  .month-year-title {
+    width: 350px;
+    max-width: 350px;
+  }
+  .month-action {
+    max-width: 40px;
+  }
+}
+
+

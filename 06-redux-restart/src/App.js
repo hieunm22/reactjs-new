@@ -1,26 +1,26 @@
-import React from 'react';
-import './App.css';
-import Home from "./Home";
-import Counter from "./Counter";
-import Control from "./Control";
-import ToDoList from "./ToDoList";
+import React from 'react'
+import logo from './logo.svg'
+import TabComponent from './TabComponent'
+import "react-tabs/style/react-tabs.css";
+import './App.css'
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  //Link
-} from "react-router-dom";
 
-const App = () => (
-  <Router>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/counter" component={Counter} />
-      <Route path="/control" component={Control} />
-      <Route path="/todolist" component={ToDoList} />
-    </Switch>
-  </Router>
-);
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { faStepBackward, faFastBackward, faStepForward, faFastForward, faCaretSquareDown } from '@fortawesome/free-solid-svg-icons'
+// import { faArrowUp, faArrowDown, faUndo, faTrash, faPlus, faEdit, faStepBackward, faFastBackward } from '@fortawesome/free-solid-svg-icons'
+
+// library.add(faArrowUp, faArrowDown, faUndo, faTrash, faPlus, faEdit)
+// library.add(faStepBackward, faFastBackward, faStepForward, faFastForward, faCaretSquareDown)
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <TabComponent />
+    </div>
+  )
+}
 
 export default App
